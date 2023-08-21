@@ -9,3 +9,71 @@ Sign 1...
 Sign 2... Yo!
 
 => END
+
+~ kingkha
+Beneath your feet was King Kha - the monarch of the land...
+It was an intense fight.
+=> END
+
+~ warning1
+Vacate the area! A mad person is on the loose. 
+If you see a knight with purple robes... 
+pray that Kha will spare you.
+=> END
+
+~ warning2
+HELP US
+=> END
+
+~ mariana
+Dear Mariana,
+If you see this, I am already gone.
+That knight in purple, who I have sworn to kill in the name of Kha,
+mortally wounded me in battle.
+I am writing this to pray that you will see it before I have to move on to the afterlife.
+And, to pray that the knight doesn't get to you.
+=> END
+
+~ consequences
+Corpses, corpses, and more corpses...
+The many monsters that you have slain to defeat Kha.
+Each one giving a little more experience than the last...
+All those families you have separated.
+=> END
+
+~ valortown
+Valortown! Home, sweet home.
+Your hometown is a little more empty than when your journey began...
+Actually... no one's home.
+=> END
+
+~ welcomeback
+Stay away, you monseter!
+MONSTER
+MONSTER
+MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER MONSTER
+=> END
+
+~ ending
+You've done it. You have defeated Kha. You're a hero...
+...
+...
+Let's be honest... You just ruined a society.
+An entire speices is now extinct due to your actions.
+Why? Just to fulfill your destiny?
+You want a happy ending, but their blood is on your hands.
+They screamed, they cried, they ran away... and you just chased them.
+Another level and more exp...
+If they were human, you might have some humanity towards them.
+But they were not, so you just justify it.
+Anything to complete your journey.
+Well... you completed your journey, but no one is congradulating you.
+...
+...
+Was it worth it?
+...
+...
+Game By: Peter Ouzts
+Programming, SFX, Art, Level Design, Story: Peter Ouzts
+Dialogue Manager Library Created By: Nathan Hoad
+=> END
