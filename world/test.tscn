@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://xvjm5uy7loha"]
+[gd_scene load_steps=4 format=3 uid="uid://xvjm5uy7loha"]
 
-[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/player.tscn" id="1_4vros"]
+[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/Player.tscn" id="1_4vros"]
+[ext_resource type="PackedScene" uid="uid://dc1bq3fc5iusu" path="res://world/interactables/Sign.tscn" id="2_8m8ek"]
+[ext_resource type="Resource" uid="uid://cc218lcjkxf38" path="res://dialogue/main.dialogue" id="3_e3tki"]
 
 [node name="Test" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_4vros")]
+position = Vector2(48, 17)
+
+[node name="Sign" parent="." instance=ExtResource("2_8m8ek")]
+position = Vector2(0, -10)
+dialogue = ExtResource("3_e3tki")
+title = "test"
