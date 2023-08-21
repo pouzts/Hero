@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 const RUN_SPEED: float = 300.0
@@ -9,6 +10,11 @@ const SPEED: float = 200.0
 var dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	dir = Vector2.DOWN
+	set_animation()
+	position.x = GameManager.player_spawn_pos.x
+	position.y = GameManager.player_spawn_pos.y
+	add_to_group("player")
 	anim_tree.active = true
 
 func _physics_process(_delta: float) -> void:
@@ -17,10 +23,11 @@ func _physics_process(_delta: float) -> void:
 	
 	velocity = dir * move_speed
 	
-	set_animation()
-	
+	# if it works, it works
 	position.x = roundf(position.x)
 	position.y = roundf(position.y)
+	
+	set_animation()
 	
 	move_and_slide()
 

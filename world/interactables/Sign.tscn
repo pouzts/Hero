@@ -5,17 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://bvd1ahkxjp16t" path="res://resources/sprites/interactables/sign.png" id="3_a6an8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muuuy"]
+size = Vector2(20, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpg72"]
+size = Vector2(4, 1)
 
 [node name="Sign" type="StaticBody2D"]
 script = ExtResource("1_4cbsq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
 texture_filter = 1
 texture = ExtResource("3_a6an8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_muuuy")
 
 [node name="Interactable" type="Area2D" parent="."]
@@ -23,7 +28,8 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_2g5l7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+[node name="Trigger" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_kpg72")
 
 [connection signal="interact" from="Interactable" to="." method="_on_interactable_interact"]

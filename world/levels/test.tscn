@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://xvjm5uy7loha"]
+
+[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/Player.tscn" id="1_cgtpy"]
+[ext_resource type="PackedScene" uid="uid://dc1bq3fc5iusu" path="res://world/interactables/Sign.tscn" id="2_7325g"]
+[ext_resource type="Resource" uid="uid://cc218lcjkxf38" path="res://dialogue/main.dialogue" id="3_gawif"]
+[ext_resource type="PackedScene" uid="uid://c5caarfcqay4r" path="res://world/overworld/level_transition/LevelTransition.tscn" id="4_fcsle"]
+
+[node name="Test" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_cgtpy")]
+position = Vector2(50, 17)
+
+[node name="Sign" parent="." instance=ExtResource("2_7325g")]
+position = Vector2(0, -10)
+dialogue = ExtResource("3_gawif")
+title = "test"
+
+[node name="LevelTransition" parent="." instance=ExtResource("4_fcsle")]
+position = Vector2(23.479, 52.9663)
+scene_name = "test2"

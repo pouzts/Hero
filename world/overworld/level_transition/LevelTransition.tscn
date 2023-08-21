@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5caarfcqay4r"]
+
+[ext_resource type="Script" path="res://world/overworld/level_transition/level_transition.gd" id="1_12s5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh2jb"]
+
+[node name="LevelTransition" type="Area2D" groups=["transitions"]]
+script = ExtResource("1_12s5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yh2jb")
+
+[node name="SpawnPosition" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
