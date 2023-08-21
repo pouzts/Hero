@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4857wwhegypu" path="res://resources/sprites/player/spr_player.png" id="2_bbs4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apt11"]
-size = Vector2(8, 15)
+size = Vector2(14, 15)
 
 [sub_resource type="Animation" id="Animation_3fqjc"]
 length = 0.001
@@ -566,7 +566,7 @@ vframes = 2
 frame = 4
 
 [node name="BoxCollider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_apt11")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

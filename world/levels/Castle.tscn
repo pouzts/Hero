@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://o6v0dsn42xhc"]
+[gd_scene load_steps=3 format=3 uid="uid://o6v0dsn42xhc"]
+
+[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/player.tscn" id="1_6tv5x"]
+[ext_resource type="PackedScene" uid="uid://c5caarfcqay4r" path="res://world/overworld/level_transition/LevelTransition.tscn" id="2_qnl06"]
 
 [node name="Castle" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6tv5x")]
+
+[node name="LevelTransition" parent="." instance=ExtResource("2_qnl06")]
+position = Vector2(129, 0)
+scene_name = "final"
+player_spawn_pos = Vector2(0, 111)

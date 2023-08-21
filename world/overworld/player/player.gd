@@ -12,8 +12,7 @@ var dir: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	dir = Vector2.DOWN
 	set_animation()
-	position.x = GameManager.player_spawn_pos.x
-	position.y = GameManager.player_spawn_pos.y
+	set_player_pos(GameManager.player_spawn_pos)
 	add_to_group("player")
 	anim_tree.active = true
 
@@ -49,3 +48,7 @@ func set_animation() -> void:
 	else:
 		anim_tree.set("parameters/conditions/idle", true)
 		anim_tree.set("parameters/conditions/is_moving", false)
+
+func set_player_pos(pos: Vector2i):
+	position.x = pos.x
+	position.y = pos.y

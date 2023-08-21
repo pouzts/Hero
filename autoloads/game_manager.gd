@@ -30,6 +30,7 @@ var game_state: GameState:
 				go_to_end()
 
 func _ready() -> void:
+	cur_scene_name = "final"
 	game_state = GameState.TITLE
 
 func _input(event: InputEvent) -> void:
@@ -45,18 +46,33 @@ func go_to_game() -> void:
 func go_to_end() -> void:
 	pass
 
-func change_level(scene_name: String) -> void:
+func change_level(scene_name: String, spawn_pos: Vector2) -> void:
 	if scene_name == cur_scene_name:
 		return
 	
-	cur_scene_name = scene_name
-	match cur_scene_name:
+	player_spawn_pos = spawn_pos
+	
+	match scene_name:
 		"test":
 			get_tree().change_scene_to_file("res://world/levels/test.tscn")
 		"test2":
 			get_tree().change_scene_to_file("res://world/levels/test2.tscn")
-		_:
-			return
+		"final":
+			get_tree().change_scene_to_file("res://world/levels/FinalRoom.tscn")
+		"castle":
+			get_tree().change_scene_to_file("res://world/levels/Castle.tscn")
+	
+	cur_scene_name = scene_name
+	
+
+func find_spawn_position(scene_name: String) -> Vector2i:
+	var transitions = get_tree().get_nodes_in_group("transitions")
+	for transition in transitions:
+		if transition is LevelTransition:
+			if (transition as LevelTransition).scene_name == scene_name:
+				return (transition as LevelTransition).spawn_pos
+	
+	return Vector2i.ZERO
 
 func quit_game() -> void:
 	paused = true
