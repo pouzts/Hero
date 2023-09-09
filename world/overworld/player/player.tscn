@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4857wwhegypu" path="res://resources/sprites/player/spr_player.png" id="2_bbs4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apt11"]
-size = Vector2(14, 15)
+size = Vector2(12.5, 15)
 
 [sub_resource type="Animation" id="Animation_3fqjc"]
 length = 0.001
@@ -543,7 +543,7 @@ advance_condition = &"idle"
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_e5mvf"]
 states/End/position = Vector2(896, 100)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_6hh8o")
-states/Idle/position = Vector2(494, 111)
+states/Idle/position = Vector2(496, 111)
 states/Move/node = SubResource("AnimationNodeBlendSpace2D_0svme")
 states/Move/position = Vector2(651, 111)
 states/Start/position = Vector2(238, 111)
@@ -563,7 +563,7 @@ texture_filter = 1
 texture = ExtResource("2_bbs4w")
 hframes = 6
 vframes = 2
-frame = 4
+frame = 8
 
 [node name="BoxCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
