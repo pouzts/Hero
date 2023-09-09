@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci13wpy65o6m3"]
 
 [ext_resource type="TileSet" uid="uid://27p62sorcn8f" path="res://resources/titlemap/castle.tres" id="1_wop76"]
-[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/player.tscn" id="2_nyxqe"]
+[ext_resource type="PackedScene" uid="uid://c5as7kekgdilb" path="res://world/overworld/player/Player.tscn" id="2_nyxqe"]
 [ext_resource type="PackedScene" uid="uid://c5caarfcqay4r" path="res://world/overworld/level_transition/LevelTransition.tscn" id="3_sgley"]
 [ext_resource type="PackedScene" uid="uid://dc1bq3fc5iusu" path="res://world/interactables/Sign.tscn" id="4_ve1b8"]
 [ext_resource type="Resource" uid="uid://cc218lcjkxf38" path="res://dialogue/main.dialogue" id="5_ija2f"]
@@ -34,7 +34,6 @@ layer_1/tile_data = PackedInt32Array(-393223, 1245184, 0, -393222, 1245184, 0, -
 position = Vector2(0, 111)
 scale = Vector2(1.6, 1)
 scene_name = "castle"
-player_spawn_pos = Vector2(129, 0)
 
 [node name="Sign" parent="." instance=ExtResource("4_ve1b8")]
 position = Vector2(-39, -77)

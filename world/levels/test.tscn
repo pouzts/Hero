@@ -20,4 +20,3 @@ title = "test"
 [node name="LevelTransition" parent="." instance=ExtResource("4_fcsle")]
 position = Vector2(23.479, 52.9663)
 scene_name = "test2"
-player_spawn_pos = Vector2(0, 0)
